@@ -1,0 +1,72 @@
+Client
+	get: /search
+		q = "大雕"
+		source = "all"
+		session = 334455
+		page = 0
+	v
+	JSON{
+		q: "dadiao",
+		source: "all",
+		count: 100,
+		page: 1,
+		totalPage: 10,
+		updateTime: xxx,
+		items: [item{}  item{}  item{}]
+	}
+		item {
+			img: "http....jpg"
+			price: 103.2
+			source: "京东"
+			title: "原味大雕"
+		}
+
+time triggered(10s):
+	get: /update
+		q = "大雕"
+	JSON:
+		updatetime {
+			time: xxxx/xx/x
+		}
+
+Client js:
+
+HTML_Updater:
+	addItem(url, price, source, title)
+	//clearItems()
+
+
+
+
+
+
+
+sendSearch(q, source, pagenum)
+	get data from page input
+	ajax send->update page(respond)
+
+updatePage(respond)
+	update search count
+	update "is newest"
+	update page number
+	update items
+
+updateSearchCount()
+
+updatePageNumber()
+
+updateItems()
+	clearAllItems()
+	addItem()
+
+clearAllItems()
+
+addItem()
+
+- - -
+
+timeTriggered:
+	sendForUpdate(q)
+		ajax send->update update
+
+updateUpdate
