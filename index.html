@@ -46,7 +46,7 @@
                     <div class="col-7">
                         <div class="input-addon">
                             <span class="addon">搜索商品:</span>
-                            <input class="addon-field" type="text">
+                            <input class="addon-field" type="text" id="search-box">
                             <a class="addon primary">&nbsp;搜索&nbsp;</a>
                         </div>
                     </div>
@@ -55,19 +55,139 @@
         </div>
 
         <div id="result-section">
-            <ul class="navigation inline" data-tabu data-start-index="0">
-                <li><a href="#result-all">所有商品</a>
+            <ul class="navigation inline" id="source-tab" data-tabu data-start-index="0">
+                <li><a href="#result-all" index="0">所有商品</a>
                 </li>
-                <li><a href="#result-tmall">天猫</a>
+                <li><a href="#result-tmall" index="1">天猫</a>
                 </li>
-                <li><a href="#result-amazon">亚马逊</a>
+                <li><a href="#result-amazon" index="2">亚马逊</a>
                 </li>
-                <li><a href="#result-jd">京东</a>
+                <li><a href="#result-jd" index="3">京东</a>
                 </li>
             </ul>
             <div class="tabu-content">
                 <div class="content" id="result-all">
                     <div class="row">
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-2 item">
+                            <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
+                            <div class="price-bar clearfix">
+                                <span class="label source danger">京东</span>
+                                <span class="label price">399.00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum odio sed porta. Ut consectetur ut dolor quis condimentum. Aliquam erat volutpat.</p>
+                        </div>
                         <div class="col-2 item">
                             <img src="http://placehold.it/200x200" alt="" class="polaroid responsive" />
                             <div class="price-bar clearfix">
@@ -91,7 +211,7 @@
         </div>
 
         <div id="paging-section" class="row">
-            <ul class="pagination center">
+            <ul class="pagination center" id="page-list">
                 <li class="previous"><a href="#">«</a>
                 </li>
                 <li class="active"><a href="#">1</a>
