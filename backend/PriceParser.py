@@ -46,7 +46,8 @@ class PriceParser(object):
             'price': item.findChild('strong', attrs={'class': 'red'}).getText(),
             'title': item.findChild('a').getText(),
             'url': item.findChild('a')['href'],
-            'pid': item.findChild('a')['href'].split('/i', 1)[1].split('.htm')[0]
+            'pid': item.findChild('a')['href'].split('/i', 1)[1].split('.htm')[0],
+            'site': 'Taobao'
         }
 
     def parseJdItem(self, item):
@@ -55,7 +56,8 @@ class PriceParser(object):
             'price': item.findChild('div', attrs={'class': 'price'}).findChild('font').getText().rsplit(';', 1)[1],
             'title': item.findChild('a').getText(),
             'url': 'http://m.jd.com' + item.findChild('a')['href'],
-            'pid': item.findChild('a')['href'].rsplit('/', 1)[1].split('.', 1)[0]
+            'pid': item.findChild('a')['href'].rsplit('/', 1)[1].split('.', 1)[0],
+            'site': 'Jd'
         }
 
     def parseAmazonItem(self, item):
@@ -64,7 +66,8 @@ class PriceParser(object):
             'price': item.findChild('span', attrs={'class': 'dpOurPrice'}).getText().rsplit(u'￥', 1)[1],
             'title': item.findChild('span', attrs={'class': 'productTitle'}).findChild('a').getText(),
             'url': 'http://www.amazon.cn/' + item.findChild('a')['href'],
-            'pid': item.findChild('a')['href'].split('qid=', 1)[1].split('&', 1)[0]
+            'pid': item.findChild('a')['href'].split('qid=', 1)[1].split('&', 1)[0],
+            'site': 'Amazon'
         }
 
     def parseEverything(self, q, page, site):
@@ -80,14 +83,14 @@ class PriceParser(object):
 
         # Take out tools
         site = site.title()
+        page = int(page)
         parseUrl = getattr(self, "parse%sUrl" % site)
         parseDiv = getattr(self, "parse%sDiv" % site)
         parseItem = getattr(self, "parse%sItem" % site)
 
         # Put page into soup
         url = parseUrl(q, page)
-        page = urllib2.urlopen(url)
-        soup = MoeSoup(page)
+        soup = MoeSoup(urllib2.urlopen(url))
 
         # Take out what we need, ignoring ones can't be parsed 'w'
         items = parseDiv(soup)
@@ -97,7 +100,7 @@ class PriceParser(object):
                 data = parseItem(item)
                 if data['img'] and data['price'] and data['title'] and data['url'] and data['pid']:
                     datas.append(data)
-                    print "[%s]Item #%d added: %s ..." % (site, datas.__len__(), data['title'][:15])
+                    print "[%s]Item #%d: %s ..." % (site, datas.__len__(), data['title'][:15])
                 else:
                     print "[%s]Null value in item, ignoring item" % site
             except (IndexError, AttributeError, TypeError) as e:

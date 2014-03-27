@@ -1,72 +1,55 @@
-Client
-	get: /search
-		q = "大雕"
-		source = "all"
-		session = 334455
-		page = 0
-	v
-	JSON{
-		q: "dadiao",
-		source: "all",
-		count: 100,
-		page: 1,
-		totalPage: 10,
-		updateTime: xxx,
-		items: [item{}  item{}  item{}]
-	}
-		item {
-			img: "http....jpg"
-			price: 103.2
-			source: "京东"
-			title: "原味大雕"
-		}
+## Server side
 
-time triggered(10s):
-	get: /update
-		q = "大雕"
-	JSON:
-		updatetime {
-			time: xxxx/xx/x
-		}
+### database
 
-Client js:
+* Updates(*q*, time)
+* Items(*id*, site, url, price, img, title, q)
+* Sessions(*sid*, data)
 
-HTML_Updater:
-	addItem(url, price, source, title)
-	//clearItems()
+### process
 
+	query(q, site, sid, page)
+		if A = findtuple(Sessions, sid=sid) == None:
+			if B = findtuple(Items, (q in title or q in q) and (site=site)) == None:
+				fetch and parse from websites for a limited time
+				write parse result to Items
+				B = findtuple(Items, (q in title or q in q) and (site=site))
+			write(Sessions, data from B)
+		return data from Sessions from A {q, site, sid, page, [{site, img, url, price, title}, ...]
 
+	queryupdate(q)
+		findtuple(Updates, q=q)
+		return JSON(time)
 
+## Client side
 
+### ajax and json transfer
 
+[C]-->[S.searchUrl]
 
+* q: query keyword
+* site: site name, can be 'all', 'amazon', etc
+* session: random session id
+* page: new page we're jumping to
 
-sendSearch(q, source, pagenum)
-	get data from page input
-	ajax send->update page(respond)
+[C]<--[S.searchUrl]
 
-updatePage(respond)
-	update search count
-	update "is newest"
-	update page number
-	update items
-
-updateSearchCount()
-
-updatePageNumber()
-
-updateItems()
-	clearAllItems()
-	addItem()
-
-clearAllItems()
-
-addItem()
+* q
+* site
+* session
+* page
+* count: total number of returned items
+* updateTime: server side update time of query 'q'
+* totalPage: we have at most this number of pages
+* items: [{img, price, site, url, title}, ...] list of actual items
 
 - - -
 
-timeTriggered:
-	sendForUpdate(q)
-		ajax send->update update
+[C]-->[S.updateUrl]
 
-updateUpdate
+* q: query keyword
+
+[C]<--[S.updateUrl]
+
+* q
+* updateTime: server side update time of query 'q'

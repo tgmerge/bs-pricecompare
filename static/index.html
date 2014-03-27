@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+    <!--link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'-->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <title>price-compare</title>
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/furatto.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- segment for js -->
+    <div class="hidden" id="template">
+        <!-- item -->
+        <div class="col-2 item">
+            <div class="text-center item-img-wrapper">
+                <img src="" alt="" class="polaroid item-img" />
+            </div>
+            <div class="price-bar clearfix">
+                <span class="label site danger"></span>
+                <span class="label price"></span>
+            </div>
+            <p class="item-title"></p>
+        </div>
+        <!-- page -->
+        <li class="pageno normal">
+            <a href="#"></a>
+        </li>
+        <li class="pageno active">
+            <a href="#"></a>
+        </li>
+    </div>
+
+    <!-- navigation bar -->
+    <nav class="navigation-bar fixed">
+        <ul class="brand-section">
+            <li class="brand-icon">
+                <li class="brand-name">
+                    <a href="/" class="menu-trigger" id="trigger"><i class="fa fa-eye"></i>Price Compare</a>
+                </li>
+                <li class="menu-toggle">
+                    <a href="#">Menu</a>
+                </li>
+        </ul>
+        <ul class="pull-right">
+            <li class="divider"></li>
+            <li><a href="#">Main page</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- main page -->
+    <div id="main">
+
+        <div id="search-section">
+            <form action="javascript:sendSearch();" method="get" accept-charset="utf-8">
+                <div class="row">
+                    <div class="col-7">
+                        <div class="input-addon">
+                            <span class="addon">搜索商品:</span>
+                            <input class="addon-field" type="text" id="search-box">
+                            <a class="addon primary" href="javascript:sendSearch();">&nbsp;搜索&nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="result-section">
+            <ul class="navigation inline" id="site-tab" data-tabu data-start-index="0">
+                <li><a href="#result-all" index="0" site="all">所有商品</a>
+                </li>
+                <li><a href="#result-all" index="1" site="taobao">淘宝</a>
+                </li>
+                <li><a href="#result-all" index="2" site="amazon">亚马逊</a>
+                </li>
+                <li><a href="#result-all" index="3" site="jd">京东</a>
+                </li>
+            </ul>
+            <div class="tabu-content">
+                <div class="content" id="result-all">
+                    <div class="row">
+                        <!-- content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="paging-section" class="row">
+            <ul class="pagination center" id="page-list">
+                <li class="previous"><a href="#">«</a>
+                </li>
+                <li class="active"><a href="#">1</a>
+                </li>
+                <li class="disabled"><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <li><a href="#">5</a>
+                </li>
+                <li>
+                    <span>6</span>
+                </li>
+                <li><a href="#">7</a>
+                </li>
+                <li><a href="#">8</a>
+                </li>
+                <li><a href="#">9</a>
+                </li>
+                <li class="next"><a href="#">»</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <div id="footer-section" class="row text-center">
+        <p>wow such price so comparable</p>
+        <ul class="navigation inline" style="display: inline-block; padding: 0;">
+            <li class="">• Price compare</li>
+            <li class="">• tgmerge 'w'</li>
+            <li class="">• 2014/03</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js">
+    </script>
+    <script type="text/javascript" src="js/furatto.min.js">
+    </script>
+    <script type="text/javascript" src="js/main.js">
+    </script>
+</body>

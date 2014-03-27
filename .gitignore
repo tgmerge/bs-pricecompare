@@ -1,3 +1,6 @@
 # test and lib folder
 /lib/*
 /test/*
+
+# python code
+.pyc
