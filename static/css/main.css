@@ -1,5 +1,5 @@
 body {
-    font-family:"Helvetica Neue", "Wenquanyi Micro Hei", "Microsoft YaHei UI", "Hiragino Sans GB", "SimHei", serif;
+    font-family:"Open Sans", "Helvetica Neue", "Wenquanyi Micro Hei", "Microsoft YaHei UI", "Hiragino Sans GB", "SimHei", serif;
 }
 #main {
     margin-top: 5rem;
@@ -39,6 +39,13 @@ img.item-img {
     bottom: 0;
     right: 0;
     left: 0;
+}
+#paging-section {
+    display: table;
+    margin: auto;
+}
+#paging-section ul {
+    display: table-row;
 }
 .navigation.inline li.active, .navigation.inline li.active > a {
     border-radius: 0;

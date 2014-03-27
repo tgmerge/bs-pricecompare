@@ -2,19 +2,13 @@
 
 var searchInput = $("#search-box");
 var siteList = $("#site-tab");
-var pageList = $("#page-list");
+var pageList = $("#paging-section");
 var resultList = $("#result-all>div.row");
 
 var itemTemp = $("#template>div.item");
 var pageTemp = $("#template>li.pageno.normal");
 var pageActiveTemp = $("#template>li.pageno.active")
 
-var siteDict = {
-    '0': 'all',
-    '1': 'taobao',
-    '2': 'amazon',
-    '3': 'jd'
-}
 var searchUrl = "/search";
 var updateUrl = "/update";
 
@@ -24,7 +18,7 @@ var sendSearch = function() {
     var q = searchInput.val();
     var site = siteList.find("li.active a").attr('site');
     var session = Math.random();
-    var page = pageList.find("li.active a").text();
+    var page = pageList.pagination('getCurrentPage');
     $.getJSON(
         searchUrl, {
             'q': q,
@@ -70,14 +64,17 @@ var updateTime = function(updateTime) {
 }
 
 var updatePageNumber = function(page, totalPage) {
-    var pageItems = pageList.find("li").remove()
-    pageList.append(pageItems[0])
-    for (var i = 1; i <= totalPage; i++) {
-        pageList.append(
-            (i == page ? pageActiveTemp : pageTemp).clone().children("a").text(i).parent()
-        );
-    }
-    pageList.append(pageItems[pageItems.length - 1]);
+    $("#paging-section").pagination({
+        pages: totalPage,
+        currentPage: page,
+        displayedPages: 10,
+        cssStyle: 'light-flat-theme',
+        prevText: "<<",
+        nextText: ">>",
+        onPageClick: function() {
+            sendSearch()
+        }
+    });
     console.log("[updatePageNumber]page, totalpage = " + page + "," + totalPage);
 }
 
@@ -86,23 +83,26 @@ var updateItems = function(items) {
     s = items;
     for (i in items) {
         var item = items[i];
-        addItem(item.img, item.price, item.site, item.title);
+        addItem(item.img, item.url, item.price, item.site, item.title);
     }
-
-    console.log("[updateItems]items = " + items);
+    console.log("[updateItems]" + items.length);
 }
 
-var addItem = function(img, price, site, title) {
+var addItem = function(img, url, price, site, title) {
     var item = itemTemp.clone();
     item.find("img").attr("src", img);
+    item.find("a.img-link").attr("href", url);
     item.find("span.price").text(price);
     item.find("span.site").text(site);
     item.find("p.item-title").text(title);
     resultList.append(item);
-    console.log("[addItem]additem:" + img + "," + price + "," + site + "," + title);
+    //console.log("[addItem]additem:" + img + "," + price + "," + site + "," + title);
 }
 
 var clearItems = function() {
     resultList.find("div.item").remove();
     console.log("[clearItems]cleared all items.");
 }
+
+//init
+updatePageNumber(1, 5);

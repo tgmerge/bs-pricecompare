@@ -45,7 +45,7 @@ class PriceParser(object):
             'img': item.findChild('img')['src'].rsplit('_', 1)[0]+'_200x200.jpg',
             'price': item.findChild('strong', attrs={'class': 'red'}).getText(),
             'title': item.findChild('a').getText(),
-            'url': item.findChild('a')['href'],
+            'url': 'http://item.taobao.com/item.htm?id=' + item.findChild('a')['href'].split('/i', 1)[1].split('.htm', 1)[0],
             'pid': item.findChild('a')['href'].split('/i', 1)[1].split('.htm')[0],
             'site': 'Taobao'
         }
@@ -55,7 +55,7 @@ class PriceParser(object):
             'img': item.findChild('img')['src'].replace('n4', 'n2', 1),
             'price': item.findChild('div', attrs={'class': 'price'}).findChild('font').getText().rsplit(';', 1)[1],
             'title': item.findChild('a').getText(),
-            'url': 'http://m.jd.com' + item.findChild('a')['href'],
+            'url': 'http://item.jd.com' + item.findChild('a')['href'],
             'pid': item.findChild('a')['href'].rsplit('/', 1)[1].split('.', 1)[0],
             'site': 'Jd'
         }
@@ -65,7 +65,7 @@ class PriceParser(object):
             'img': item.findChild('img')['src'].replace('._SL75_.', '._AA200_.', 1),
             'price': item.findChild('span', attrs={'class': 'dpOurPrice'}).getText().rsplit(u'￥', 1)[1],
             'title': item.findChild('span', attrs={'class': 'productTitle'}).findChild('a').getText(),
-            'url': 'http://www.amazon.cn/' + item.findChild('a')['href'],
+            'url': 'http://www.amazon.cn' + item.findChild('a')['href'].replace('gp/aw/d', 'dp', 1),
             'pid': item.findChild('a')['href'].split('qid=', 1)[1].split('&', 1)[0],
             'site': 'Amazon'
         }
@@ -80,6 +80,7 @@ class PriceParser(object):
         return:
             a list of dict{img, price, title, url, pid}
         '''
+        print "[parseEverything]%s, %s, %s" % (q, page, site)
 
         # Take out tools
         site = site.title()
@@ -90,6 +91,7 @@ class PriceParser(object):
 
         # Put page into soup
         url = parseUrl(q, page)
+        print "[parseEverything]URL=%s" % url
         soup = MoeSoup(urllib2.urlopen(url))
 
         # Take out what we need, ignoring ones can't be parsed 'w'
@@ -105,6 +107,7 @@ class PriceParser(object):
                     print "[%s]Null value in item, ignoring item" % site
             except (IndexError, AttributeError, TypeError) as e:
                     print "[%s]Exception, ignoring item" % site
+                    print e
 
         print "---Returning %d items---" % datas.__len__()
         return datas
