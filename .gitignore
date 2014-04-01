@@ -1,6 +1,7 @@
 # test and lib folder
 /lib/*
 /test/*
+*.db
 
 # python code
 .pyc

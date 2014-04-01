@@ -65,6 +65,8 @@ span.price {
     float: right;
     padding-right: 0;
     text-shadow: none;
+    min-width: 6rem;
+    text-align: right;
 }
 ::-webkit-scrollbar {
     width:5px;

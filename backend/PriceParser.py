@@ -6,9 +6,9 @@ from BeautifulSoup import BeautifulSoup as MoeSoup
 
 
 class PriceParser(object):
-    '''
-    Parse search result page
-    To support another site "SITE", just add SiteUrl, parseSiteUrl(), parseSiteDiv(), parseSiteItem().
+    '''Parse search result page
+    To support another site "SITE", just add SiteUrl, parseSiteUrl(),
+    parseSiteDiv(), parseSiteItem().
     '''
 
     TaobaoUrl = 'http://s.m.taobao.com/search.htm?s=%(startItem)d&n=40&q=%(q)s'
@@ -20,15 +20,15 @@ class PriceParser(object):
         super(PriceParser, self).__init__()
 
     def parseTaobaoUrl(self, q, page):
-        return self.TaobaoUrl % {'startItem': self.TaobaoItemsPerPage*page,
+        return self.TaobaoUrl % {'startItem': self.TaobaoItemsPerPage * page,
                                  'q': urllib.quote_plus(q)}
 
     def parseJdUrl(self, q, page):
-        return self.JdUrl % {'page': page+1,
+        return self.JdUrl % {'page': page + 1,
                              'q': urllib.quote_plus(q)}
 
     def parseAmazonUrl(self, q, page):
-        return self.AmazonUrl % {'page': page+1,
+        return self.AmazonUrl % {'page': page + 1,
                                  'q': urllib.quote_plus(q)}
 
     def parseTaobaoDiv(self, soup):
@@ -42,10 +42,11 @@ class PriceParser(object):
 
     def parseTaobaoItem(self, item):
         return {
-            'img': item.findChild('img')['src'].rsplit('_', 1)[0]+'_200x200.jpg',
+            'img': item.findChild('img')['src'].rsplit('_', 1)[0] + '_200x200.jpg',
             'price': item.findChild('strong', attrs={'class': 'red'}).getText(),
             'title': item.findChild('a').getText(),
-            'url': 'http://item.taobao.com/item.htm?id=' + item.findChild('a')['href'].split('/i', 1)[1].split('.htm', 1)[0],
+            'url': 'http://item.taobao.com/item.htm?id=' +
+                   item.findChild('a')['href'].split('/i', 1)[1].split('.htm', 1)[0],
             'pid': item.findChild('a')['href'].split('/i', 1)[1].split('.htm')[0],
             'site': 'Taobao'
         }
@@ -53,7 +54,8 @@ class PriceParser(object):
     def parseJdItem(self, item):
         return {
             'img': item.findChild('img')['src'].replace('n4', 'n2', 1),
-            'price': item.findChild('div', attrs={'class': 'price'}).findChild('font').getText().rsplit(';', 1)[1],
+            'price': item.findChild('div', attrs={'class': 'price'}).findChild(
+                'font').getText().rsplit(';', 1)[1],
             'title': item.findChild('a').getText(),
             'url': 'http://item.jd.com' + item.findChild('a')['href'],
             'pid': item.findChild('a')['href'].rsplit('/', 1)[1].split('.', 1)[0],
@@ -63,16 +65,18 @@ class PriceParser(object):
     def parseAmazonItem(self, item):
         return {
             'img': item.findChild('img')['src'].replace('._SL75_.', '._AA200_.', 1),
-            'price': item.findChild('span', attrs={'class': 'dpOurPrice'}).getText().rsplit(u'￥', 1)[1],
-            'title': item.findChild('span', attrs={'class': 'productTitle'}).findChild('a').getText(),
-            'url': 'http://www.amazon.cn' + item.findChild('a')['href'].replace('gp/aw/d', 'dp', 1),
+            'price': item.findChild('span', attrs={'class': 'dpOurPrice'}).getText().rsplit(
+                u'￥', 1)[1],
+            'title': item.findChild('span', attrs={'class': 'productTitle'}).findChild(
+                'a').getText(),
+            'url': 'http://www.amazon.cn' + item.findChild('a')['href'].replace(
+                'gp/aw/d', 'dp', 1),
             'pid': item.findChild('a')['href'].split('qid=', 1)[1].split('&', 1)[0],
             'site': 'Amazon'
         }
 
     def parseEverything(self, q, page, site):
-        '''
-        Parse everything.
+        '''Parse everything.
         args:
             q   : string, query string
             page: int, result page index
