@@ -4,4 +4,4 @@
 *.db
 
 # python code
-.pyc
+*.pyc

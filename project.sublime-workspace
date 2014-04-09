@@ -1,0 +1,1319 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clos",
+				"closeDb"
+			],
+			[
+				"qur",
+				"queryUpdate  (function)"
+			],
+			[
+				"insert",
+				"insertTuples"
+			],
+			[
+				"fetch",
+				"fetchAndStore"
+			],
+			[
+				"ava",
+				"availableSites"
+			],
+			[
+				"find",
+				"findTuple"
+			],
+			[
+				"db",
+				"dbFilename"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"save",
+				"savePath"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"Chrom",
+				"ChromeOptions"
+			],
+			[
+				"sele",
+				"selenium  (module)"
+			],
+			[
+				"to",
+				"to_capabilities"
+			],
+			[
+				"rety",
+				"retryDelay"
+			],
+			[
+				"fail",
+				"failCount"
+			],
+			[
+				"succ",
+				"succCount"
+			],
+			[
+				"get",
+				"getPageImage"
+			],
+			[
+				"sav",
+				"savePath"
+			],
+			[
+				"over",
+				"overwriteSize"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"execute",
+				"executemany"
+			],
+			[
+				"tota",
+				"totalPage"
+			],
+			[
+				"clear",
+				"clearItems"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"cla",
+				"addClass  (function)"
+			],
+			[
+				"list",
+				"pageList"
+			],
+			[
+				"total",
+				"totalPage"
+			],
+			[
+				"result",
+				"resultList"
+			],
+			[
+				"time",
+				"timetuple"
+			],
+			[
+				"static",
+				"staticFile"
+			],
+			[
+				"__l",
+				"__len__  (function)"
+			],
+			[
+				"pr",
+				"PriceParser"
+			],
+			[
+				"p",
+				"PriceParser"
+			],
+			[
+				"P",
+				"PriceParser"
+			],
+			[
+				"url",
+				"urllib"
+			],
+			[
+				"taobao",
+				"taobaoItemsPerPage"
+			],
+			[
+				"attr",
+				"attribute"
+			],
+			[
+				"fet",
+				"fetchText"
+			],
+			[
+				"findChil",
+				"findChildren"
+			],
+			[
+				"update",
+				"updateTime"
+			],
+			[
+				"updatePage",
+				"updatePageNumber"
+			],
+			[
+				"updte",
+				"updatePage"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"choose",
+				"choose_old"
+			],
+			[
+				"ov",
+				"overwriteSize"
+			],
+			[
+				"sa",
+				"savePath"
+			],
+			[
+				"imgC",
+				"imgContainer"
+			],
+			[
+				"im",
+				"imgdiv"
+			],
+			[
+				"visi",
+				"visibility_of"
+			],
+			[
+				"loca",
+				"location_once_scrolled_into_view"
+			],
+			[
+				"find_ele",
+				"find_element_by_css_selector"
+			],
+			[
+				"alu",
+				"alu_out"
+			],
+			[
+				"up",
+				"updateFlashlight"
+			],
+			[
+				"game",
+				"game-container"
+			],
+			[
+				"app",
+				"applyFlashlight  (function)"
+			],
+			[
+				"H",
+				"HTMLActuator"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"act",
+				"actuator  (variable)"
+			],
+			[
+				"sho",
+				"showTiles"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"sh",
+				"showTiles"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"ac",
+				"Actuator"
+			],
+			[
+				"hid",
+				"hideTiles"
+			],
+			[
+				"par",
+				"param_spage"
+			],
+			[
+				"special",
+				"special_type"
+			],
+			[
+				"spec",
+				"special_type"
+			],
+			[
+				"page",
+				"page_type"
+			],
+			[
+				"file",
+				"isfile  (function)"
+			],
+			[
+				"spe",
+				"special_type"
+			],
+			[
+				"param_",
+				"param_epage"
+			],
+			[
+				"Http",
+				"HttpResponse"
+			],
+			[
+				"djan",
+				"djangosite"
+			],
+			[
+				"search",
+				"search_form"
+			],
+			[
+				"HTTP",
+				"HttpResponse"
+			],
+			[
+				"htt",
+				"HttpResponse"
+			],
+			[
+				"dj",
+				"djangosite"
+			],
+			[
+				"__pa",
+				"__package__"
+			],
+			[
+				"r",
+				"rye"
+			],
+			[
+				"getc",
+				"getcwd"
+			],
+			[
+				"mod",
+				"modules"
+			],
+			[
+				"_",
+				"__main__"
+			],
+			[
+				"b",
+				"buildConnectionString"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 46.0,
+		"selected_items":
+		[
+			[
+				"sidebar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"replpy",
+				"SublimeREPL: Python"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"prev",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"preview",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"reload",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"repl shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"repl pow",
+				"SublimeREPL: PowerShell"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"bat",
+				"Set Syntax: Batch File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Cheat Sheet: Git"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remoe",
+				"BracketHighlighter: Remove Brackets"
+			],
+			[
+				"repl",
+				"SublimeREPL: PowerShell"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"list p",
+				"Package Control: List Packages"
+			],
+			[
+				"markdown pre brow",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"minimap",
+				"View: Toggle Minimap"
+			],
+			[
+				"markdown gfm",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"repl python",
+				"SublimeREPL: Python"
+			],
+			[
+				"pdf",
+				"SublimeREPL: Python - PDB current file"
+			],
+			[
+				"pdb",
+				"SublimeREPL: Python - PDB current file"
+			],
+			[
+				"python ",
+				"SublimeREPL: Python"
+			],
+			[
+				"replpython",
+				"SublimeREPL: Python"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"linter re",
+				"SublimeLinter: Report (Open Files)"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"sideba",
+				"View: Toggle Side Bar"
+			],
+			[
+				"replp y",
+				"SublimeREPL: Python"
+			],
+			[
+				"linter all",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"minima",
+				"View: Toggle Minimap"
+			],
+			[
+				"navigate",
+				"Browser Integration: Navigate To"
+			],
+			[
+				"package upda",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"sublimerepl:",
+				"SublimeREPL: Python - Sublime Text Console"
+			],
+			[
+				"pyrun",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"synpy",
+				"Set Syntax: Python"
+			],
+			[
+				"synpython",
+				"Set Syntax: Python"
+			],
+			[
+				"pytun",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"py run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"python run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"syntax python",
+				"Set Syntax: Python"
+			],
+			[
+				"pythonrun",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"repl p",
+				"SublimeREPL: Python"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"add fold",
+				"Project: Add Folder"
+			],
+			[
+				"add fo",
+				"Project: Add Folder"
+			],
+			[
+				"toggle ",
+				"View: Toggle Side Bar"
+			],
+			[
+				"prettify",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"html pre",
+				"HTMLPrettify"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"pyton",
+				"Set Syntax: Python"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"saveall",
+				"File: Save All"
+			],
+			[
+				"convert",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"encoding",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"gitpre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"gitmarkdown",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"pypre",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"cheatsheet",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"githubpre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"github mark",
+				"Cheat Sheet: Github Flavored Markdown"
+			],
+			[
+				"prepy",
+				"Markdown Preview: Python Markdown: Copy to Clipboard"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"python pre",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"markdown pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"add f",
+				"Project: Add Folder"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"git pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"preview git pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"preview git ",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"markdown pre git",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"instal pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pre git br",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"preview brow",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preview github br",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"enable pa",
+				"Package Control: Enable Package"
+			],
+			[
+				"markdown ",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"toggle ma",
+				"View: Toggle Minimap"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"add folder",
+				"Project: Add Folder"
+			],
+			[
+				"add fol",
+				"Project: Add Folder"
+			],
+			[
+				"utf8",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"toggle",
+				"View: Toggle Side Bar"
+			],
+			[
+				"repl pyto",
+				"SublimeREPL: Python"
+			],
+			[
+				"",
+				":w - Save"
+			],
+			[
+				"code",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"verilog",
+				"Set Syntax: Verilog"
+			],
+			[
+				"hex",
+				"Hex Viewer: Run Checksum"
+			],
+			[
+				"hex ",
+				"Hex Viewer: Toggle Hex View"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"replpyth",
+				"SublimeREPL: Python"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"intel",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"ru",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"pytr",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"py",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"syncss",
+				"Set Syntax: CSS"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
+			],
+			[
+				"htmlpre",
+				"HTMLPrettify"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"cue",
+				"Set Syntax: CUE Sheet"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"them",
+				"Themr: List themes"
+			],
+			[
+				"cheat sheet",
+				"Cheat Sheet: Regular Expressions"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"pytho",
+				"SublimeREPL: Python"
+			]
+		],
+		"width": 344.0
+	},
+	"console":
+	{
+		"height": 262.0,
+		"history":
+		[
+			"which",
+			"cd",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/workspace/bs-pricecompare/project.sublime-project",
+		"/D/workspace/arch-mulcpu/ipcore_dir/dmem.xco",
+		"/D/workspace/arch-mulcpu/ipcore_dir/imem.xco",
+		"/D/workspace/arch-mulcpu/top.v",
+		"/D/workspace/arch-mulcpu/dataMem.coe",
+		"/C/Users/tgmerge/AppData/Local/Temp/Rar$DRa0.571/goagent-goagent-f6598e6/server/gae/gae.py",
+		"/C/Users/tgmerge/AppData/Local/Temp/Rar$DRa0.043/goagent-goagent-f6598e6/local/proxy.py",
+		"/D/workspace/bs-pricecompare/backend/test_DbController.py",
+		"/D/workspace/bs-pricecompare/backend/PriceParser.py",
+		"/D/workspace/bs-pricecompare/backend/Soda.py",
+		"/D/workspace/bs-pricecompare/backend/DbController.py",
+		"/R/pipeLineCPU/top.v",
+		"/R/pipeLineCPU/imm2sa.v",
+		"/D/workspace/bs-pricecompare/readme.md",
+		"/F/music_New/[LonE]_Mizutani_Runa_(NanosizeMir)_-_Rewrite_OP_ED_Single_-_Philosophyz_[w_scans]_(FLAC)/[LonE]_Mizutani_Runa_(NanosizeMir)_-_Rewrite_OP_ED_Single_-_Philosophyz_[w_scans]_(FLAC)/KSLA-0067.cue",
+		"/F/music_New/[VAD-002] 幻想の在処は現実/[VAD-002] 幻想の在処は現実  幻想の在処は現実.cue",
+		"/F/music_New/[EAC] [081029] 戸松遥 - motto☆派手にね！ 「かんなぎ」 OP [かんなぎ盤] (tak+inCue+jpg rr5)/SMCL-158.cue",
+		"/F/music_New/[EAC][120824]PCゲーム 大図書館の羊飼い OPテーママキシシングル「ストレイトシープ」(wav+png)/[EAC][120824]大図書館の羊飼い オープニングテーママキシシングル ストレイトシープ／夢飼い日和 (wav+cue+png)/SCMN-012B.cue",
+		"/R/multi.py",
+		"/C/cygwin64/home/tgmerge/.minttyrc",
+		"/C/cygwin64/home/tgmerge/.bashrc",
+		"/D/workspace/se-stock/Requirements.md",
+		"/D/workspace/bs-pricecompare/static/css/simplePagination.css",
+		"/D/workspace/bs-pricecompare/static/index.html",
+		"/R/d",
+		"/D/workspace/se-stock/.gitconfig",
+		"/R/d.py",
+		"/E/Sublime Text 3/Data/Packages/SublimeREPL/README.md",
+		"/E/Sublime Text 3/Data/Packages/User/SublimeREPL.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/SublimeREPL/config/Shell/Main.sublime-menu",
+		"/E/Sublime Text 3/Data/Packages/SublimeREPL/config/Shell/Default.sublime-commands",
+		"/E/Sublime Text 3/Data/Packages/Cheat Sheets/cheat-sheets/Git.cheatsheet",
+		"/E/Sublime Text 3/Data/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/Pandoc/Pandoc.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/User/Pandoc.sublime-settings",
+		"/D/_Course/se_hw1.md",
+		"/E/Sublime Text 3/Data/Packages/User/Python.sublime-settings",
+		"/D/workspace/bs-pricecompare/backend/PriceParser.pyc",
+		"/E/Python27/Lib/sqlite3/__init__.py",
+		"/E/Python27/Lib/sqlite3/dbapi2.py",
+		"/E/Python27/Lib/sqlite3/test/factory.py",
+		"/D/workspace/hen-fetch/HenFetch.py",
+		"/D/workspace/arch-mulcpu/.gitignore",
+		"/D/workspace/hen-fetch/.gitignore",
+		"/D/workspace/htdocs/qscbbs.css",
+		"/I/koreader/frontend/ui/data/creoptions.lua",
+		"/I/koreader/frontend/ui/data/strings.lua",
+		"/I/koreader/frontend/ui/data/koptoptions.lua",
+		"/D/workspace/hen-fetch/memo.txt",
+		"/I/koreader/reader.lua",
+		"/D/workspace/hen-fetch/test_HenFetch.py",
+		"/I/koreader/defaults.lua",
+		"/I/koreader/README.md",
+		"/I/koreader/settings.reader.lua",
+		"/D/workspace/hen-fetch/test_selenium.py",
+		"/E/Python27/lib/site-packages/selenium/webdriver/chrome/options.py",
+		"/E/Python27/lib/site-packages/selenium/webdriver/__init__.py",
+		"/E/Python27/lib/site-packages/selenium/webdriver/chrome/service.py",
+		"/E/Python27/lib/site-packages/selenium/webdriver/chrome/webdriver.py",
+		"/E/Python27/lib/site-packages/selenium/webdriver/chrome/__init__.py",
+		"/D/workspace/python/dximg_selenium.py",
+		"/D/workspace/hen-fetch/readme.md",
+		"/D/workspace/bs-pricecompare/static/css/main.css",
+		"/D/workspace/bs-pricecompare/static/js/main.js",
+		"/D/workspace/bs-pricecompare/backend/bottle_sqlite.py",
+		"/D/workspace/bs-pricecompare/backend/bottle.py",
+		"/E/Sublime Text 3/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/workspace/arch-mulcpu/readme.md",
+		"/D/workspace/arch-mulcpu/_doc/report.md",
+		"/D/workspace/arch-mulcpu/_doc/lab1.md",
+		"/D/workspace/PriceCompare/PriceCompare/ajax.py",
+		"/D/workspace/bs-pricecompare/backend/BeautifulSoup.py",
+		"/D/workspace/bs-pricecompare/static/css/opensans-font.css",
+		"/D/workspace/PriceCompare/templates/base.html",
+		"/D/workspace/PriceCompare/PriceCompare/urls.py",
+		"/D/workspace/PriceCompare/PriceCompare/tests.py",
+		"/D/workspace/PriceCompare/PriceCompare/views.py",
+		"/D/workspace/PriceCompare/templates/home.html",
+		"/D/workspace/PriceCompare/static/js/PriceCompare.js",
+		"/D/workspace/bs-pricecompare/backend/RespondBuilder.py",
+		"/D/workspace/bs-pricecompare/backend/test.py",
+		"/D/workspace/bs-pricecompare/memo-js.txt",
+		"/D/workspace/bs-pricecompare/backend/bottletest.py",
+		"/D/workspace/bs-pricecompare/.gitignore",
+		"/E/Sublime Text 3/Data/Packages/Trimmer/Default (Windows).sublime-keymap",
+		"/R/bottletest.py",
+		"/D/workspace/bs-pricecompare/backend/priceParserOld",
+		"/D/workspace/bs-pricecompare/index.html",
+		"/D/workspace/bs-pricecompare/css/main.css",
+		"/D/workspace/bs-pricecompare/js/main.js",
+		"/C/Users/tgmerge/AppData/Local/Temp/Rar$DRa0.674/iCheck-master/README.md",
+		"/D/workspace/bs-pricecompare/js/check_box_radio_buttons.js",
+		"/D/workspace/bs-pricecompare/js/check_in_radio_buttons-ck.js",
+		"/D/workspace/arch-mulcpu/regs.v",
+		"/D/workspace/arch-mulcpu/reg_wrapper.v",
+		"/D/workspace/arch-mulcpu/mem.asy",
+		"/D/workspace/bs-pricecompare/test/index.html",
+		"/D/workspace/arch-mulcpu/Memory.coe",
+		"/D/workspace/.gitconfig",
+		"/R/a.py",
+		"/E/Sublime Text 3/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/E/Sublime Text 3/Data/Packages/BracketHighlighter/Example.sublime-keymap",
+		"/E/Sublime Text 3/Data/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Users/tgmerge/AppData/Local/Temp/Rar$DRa0.214/p43/top.v",
+		"/D/workspace/arch_mulcpu/ctrl.v",
+		"/D/workspace/arch_mulcpu/_doc/lab1.md",
+		"/D/workspace/arch_mulcpu/Memory.coe",
+		"/D/workspace/arch_mulcpu/.gitignore",
+		"/D/workspace/python/dximg_2.py",
+		"/D/workspace/arch_mulcpu/top.unroutes",
+		"/D/workspace/arch_mulcpu/reg_wrapper.v",
+		"/D/workspace/arch_mulcpu/top.v",
+		"/D/workspace/arch_mulcpu/alu_wrapper.v",
+		"/D/workspace/arch_mulcpu/regs.v",
+		"/D/workspace/arch_mulcpu/alu.v",
+		"/D/workspace/log.txt",
+		"/D/workspace/arch_mulcpu/xilinxsim.ini",
+		"/D/workspace/arch_mulcpu/xst/work/vlg1A/reg__wrapper.bin",
+		"/D/workspace/arch_mulcpu/_xmsgs/pn_parser.xmsgs",
+		"/D/workspace/_history/mips-assembler/test.asm.bin",
+		"/D/workspace/arch_mulcpu/clock.v",
+		"/E/Sublime Text 3/Data/Packages/User/MarkdownPreview.sublime-settings",
+		"/E/Sublime Text 3/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"class ",
+			"class",
+			"def ",
+			"def",
+			" =",
+			"[:]",
+			"[:]<",
+			"[:]",
+			":",
+			"strdata",
+			"<9",
+			"print ",
+			"res",
+			".connect",
+			"connect",
+			"dbFilename",
+			".",
+			"insert",
+			" ",
+			"INDEX 01 ",
+			"\"F:\\music_New\\[LonE]_Mizutani_Runa_(NanosizeMir)_-_Rewrite_OP_ED_Single_-_Philosophyz_[w_scans]_(FLAC)\\",
+			"conn",
+			"arg",
+			"conn",
+			"conn,",
+			"DC",
+			"self.conn",
+			"conn",
+			"cmd",
+			"!",
+			"Control",
+			"DC",
+			"DbController",
+			"Updates",
+			"conn",
+			"cur",
+			"len",
+			"1",
+			"row_factory",
+			"row",
+			"'''",
+			"page",
+			"contrast",
+			"gamma",
+			"zoom",
+			"set",
+			"*",
+			"'",
+			"pref",
+			"options",
+			"chromeOptions",
+			"ChromeOptions",
+			"options",
+			"Options",
+			"options",
+			"valid",
+			"saveFolder=",
+			"url",
+			"TEXT",
+			"def",
+			"alias",
+			" class=\"\"",
+			") fo",
+			"url",
+			"updateItems",
+			"addItem",
+			"light-theme",
+			"center",
+			"site",
+			"searchcount",
+			"天猫",
+			"tmall",
+			"1",
+			"source",
+			"data",
+			"list",
+			"urllib",
+			"def",
+			"updateUpdateTime",
+			"XXX",
+			"price-bar",
+			"#ex3",
+			"<p>",
+			":",
+			": ",
+			"alu_out",
+			"rcontent",
+			"sw",
+			"reg",
+			"strdata",
+			"key",
+			"alt+",
+			"  \n",
+			"zero",
+			"write_pc",
+			"ID",
+			"beq",
+			"size",
+			"join",
+			"savepath",
+			"folder",
+			"cwd",
+			"savePath",
+			"specialImgName",
+			"loadingImgList",
+			"parse",
+			"css_selector",
+			"position",
+			"alu_out",
+			"pc_old",
+			"7:4",
+			"alu_ctrl",
+			"r6out",
+			"alu_ctrl",
+			"SLT",
+			"insn_code",
+			"insn_type",
+			"id",
+			"slt",
+			"r6out",
+			"alu_out",
+			"alu",
+			"r6",
+			",",
+			".log",
+			"r6out",
+			"r6",
+			"_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"\"\"",
+			"\"",
+			"淘宝",
+			"taobao",
+			"site",
+			"updateTime",
+			": ",
+			":",
+			"saveFolder",
+			"saveNameDict",
+			"loadingImgName",
+			"",
+			"INDEX 01 00:00:00",
+			"",
+			"INDEX 01 00:00:00",
+			"",
+			"INDEX 01 00:00:00",
+			"",
+			" ",
+			"",
+			"xx",
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 128.0
+	},
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"reg_wrapper",
+				"reg_wrapper.v"
+			],
+			[
+				"reg.v",
+				"regs.v"
+			],
+			[
+				"reg",
+				"reg_wrapper.v"
+			],
+			[
+				"regs",
+				"regs.v"
+			],
+			[
+				"ctrl.v",
+				"ctrl.v"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

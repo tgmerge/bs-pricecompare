@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from bottle import route, run, static_file, get, request
 import PriceParser
 import time

@@ -6,15 +6,16 @@ from BeautifulSoup import BeautifulSoup as MoeSoup
 
 
 class PriceParser(object):
-    '''Parse search result page
+    """Parse search result page
     To support another site "SITE", just add SiteUrl, parseSiteUrl(),
     parseSiteDiv(), parseSiteItem().
-    '''
+    """
 
-    TaobaoUrl = 'http://s.m.taobao.com/search.htm?s=%(startItem)d&n=40&q=%(q)s'
+    TaobaoUrl = 'http://s.m.taobao.com/search.htm?s=%(startItem)d&n=20&q=%(q)s'
     JdUrl = 'http://m.jd.com/ware/search.action?cid=0&keyword=%(q)s&sort=0&page=%(page)d'
     AmazonUrl = 'http://www.amazon.cn/gp/aw/s?page=%(page)d&keywords=%(q)s'
-    TaobaoItemsPerPage = 40
+    TaobaoItemsPerPage = 20
+    availableSites = ["Amazon", "Jd", "Taobao"]
 
     def __init__(self):
         super(PriceParser, self).__init__()
@@ -76,14 +77,14 @@ class PriceParser(object):
         }
 
     def parseEverything(self, q, page, site):
-        '''Parse everything.
+        """Parse everything.
         args:
             q   : string, query string
             page: int, result page index
             site: string, currently can be "amazon", "jd", "taobao"
         return:
             a list of dict{img, price, title, url, pid}
-        '''
+        """
         print "[parseEverything]%s, %s, %s" % (q, page, site)
 
         # Take out tools
