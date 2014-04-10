@@ -44,6 +44,8 @@ class DbController(object):
     """Time(sec) waiting for items to be fetched and stored into database. Default: 3"""
     itemsPerPage = 24
     """Maximum number of items in a result page. Default: 24"""
+    siteAllKeyword = 'All'
+    """site='All' is a troublesome condition. Ugly dealing."""
 
     dbInitSql = '''
         CREATE TABLE IF NOT EXISTS
@@ -177,11 +179,15 @@ class DbController(object):
 
         if not items:
             # Try to search someing corresponding 'q' from Items
-            items = self.findTuple("*", "Items", ["q = '%s'" % q, "site = '%s'" % site])
+            items = (site == self.siteAllKeyword) \
+                and self.findTuple("*", "Items", ["q = '%s'" % q]) \
+                or self.findTuple("*", "Items", ["q = '%s'" % q, "site = '%s'" % site])
             if not items:
                 # Found nothing... Wait few seconds for fetchAndStore to fill some
                 time.sleep(self.waitTimeForFetch)
-                items = self.findTuple("*", "Items", ["q = '%s'" % q, "site = '%s'" % site])
+                items = (site == self.siteAllKeyword) \
+                    and self.findTuple("*", "Items", ["q = '%s'" % q]) \
+                    or self.findTuple("*", "Items", ["q = '%s'" % q, "site = '%s'" % site])
             # Keep a new session
             self.insertTuples("Sessions", [(sid, json.dumps(items))], replace=True)
 
@@ -199,10 +205,9 @@ class DbController(object):
     # Fetch from websites
 
     @threaded
-    def fetchAndStore(self, q, site='All'):
+    def fetchAndStore(self, q, site):
         """Fetch data using PriceParser, then store them into database.
         Use another db connection than caller, due to limit of sqlite3 in multithreading
-        TODO fetch each site/all site!
         """
         controller = DbController(self.dbFilename)
         updateTime = int(float(controller.queryUpdate(q)["updateTime"]))
@@ -215,9 +220,10 @@ class DbController(object):
             parser = PriceParser.PriceParser()
             itemCount = 0
             for page in range(1, self.maxFetchPages + 1):
-                results = parser.parseEverything(q, page, site)
-                if results.__len__() > 0:
-                    controller.insertTuples("Items", [(q, item['pid'], item['site'], item['url'], item['price'], item['img'], item['title']) for item in results], replace=True)
-                    itemCount += results.__len__()
+                for querySite in (site == self.siteAllKeyword) and parser.availableSites or [site]:
+                    results = parser.parseEverything(q, page, querySite)
+                    if results.__len__() > 0:
+                        controller.insertTuples("Items", [(q, item['pid'], item['site'], item['url'], item['price'], item['img'], item['title']) for item in results], replace=True)
+                        itemCount += results.__len__()
             print "[fetchAndStore]Fetch %s from %s done. %d items." % (q, site, itemCount)
         controller.closeDb()
