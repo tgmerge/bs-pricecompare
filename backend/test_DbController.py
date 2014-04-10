@@ -50,8 +50,22 @@ sleep(2)
 db.fetchAndStore("大雕", "Jd")
 '''
 
+
+db = DC.DbController('test.db')
+db.initDb()
+print "WOW1",
+res = db.querySearch('大雕', 'Taobao', 'xxxx', 1)
+print "WOW1",
+print res
+
+
+'''
 db = DC.DbController('test.db')
 db.initDb()
 db.renewUpdate('大雕')
-sleep(10)
-db.querySearch('大雕', 'Jd', 'xxxx', 1)
+res = db.queryUpdate('大雕')
+print res
+db.renewUpdate('大雕')
+res = db.queryUpdate('大雕')
+print res
+'''

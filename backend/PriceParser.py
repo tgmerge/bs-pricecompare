@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import urllib2
 import urllib
 from BeautifulSoup import BeautifulSoup as MoeSoup

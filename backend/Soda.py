@@ -1,44 +1,31 @@
 # -*- coding: utf-8 -*-
+from bottle import route, run, static_file, get, request, Bottle
+import DbController
 
-from bottle import route, run, static_file, get, request
-import PriceParser
-import time
+db = DbController.DbController('test.db')
+db.initDb()
+priceCompare = Bottle()
 
+with priceCompare:
+    @route('/')
+    def indexHtml():
+        return staticFile('index.html')
 
-@route('/')
-def indexHtml():
-    return staticFile('index.html')
+    @route('/<filepath:path>')
+    def staticFile(filepath):
+        return static_file(filepath, root='./../static/')
 
+    @get('/search')
+    def query():
+        # todo add value validator
+        return db.querySearch(q=request.GET.get('q'),
+                              site=request.GET.get('site'),
+                              sid=request.GET.get('session'),
+                              page=request.GET.get('page'))
 
-@route('/<filepath:path>')
-def staticFile(filepath):
-    return static_file(filepath, root='./../static/')
+    @get('/update')
+    def queryUpdate():
+        # todo add value validator
+        return db.queryUpdate(q=request.GET.get('q'))
 
-
-@get('/search')
-def query():
-    # todo value validator
-
-    p = PriceParser.PriceParser()
-
-    data = p.parseEverything(request.GET.get('q'),
-                             1,
-                             request.GET.get('site'))
-    return {'q': request.GET.get('q'),
-            'site': request.GET.get('site'),
-            'session': request.GET.get('session'),
-            'page': request.GET.get('page'),
-            'totalPage': "4",
-            'count': data.__len__(),
-            'updateTime': time.time(),
-            'items': data}
-
-
-@get('/update')
-def queryUpdate():
-    # todo value validator
-
-    return {'q': request.GET.get('q'),
-            'updateTime': time.time()}
-
-run(host='localhost', port=8080)
+run(app=priceCompare, host='localhost', port=8080)

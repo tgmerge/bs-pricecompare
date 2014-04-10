@@ -11,3 +11,7 @@
 ## 测试
 
     python backend/Soda.py
+
+## 'w'
+
+    拜托至少等这学期完再clone...
