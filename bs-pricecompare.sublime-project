@@ -1,0 +1,20 @@
+{
+    "folders": [{
+        "name": "Root folder",
+        "path": ".",
+        "folder_exclude_patterns": ["*"],
+    }, {
+        "name": "Backend",
+        "path": "backend",
+    }, {
+        "name": "HTML",
+        "path": "static",
+        "folder_exclude_patterns": ["*"],
+    }, {
+        "name": "CSS",
+        "path": "static/css"
+    }, {
+        "name": "JS",
+        "path": "static/js"
+    }]
+}

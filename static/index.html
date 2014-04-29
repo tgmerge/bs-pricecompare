@@ -61,12 +61,12 @@
     <!-- main page -->
     <div id="main">
         <div id="search-section">
-            <form action="javascript:sendSearch();" method="get" accept-charset="utf-8">
+            <form action="javascript:search();" method="get" accept-charset="utf-8">
                 <div class="row">
                     <div class="col-7 input-addon">
                         <span class="addon">搜索商品:</span>
                         <input class="addon-field" type="text" id="search-box">
-                        <a class="addon primary" href="javascript:sendSearch();">&nbsp;搜索&nbsp;</a>
+                        <a class="addon primary" href="javascript:search();">&nbsp;搜索&nbsp;</a>
                     </div>
                 </div>
             </form>
@@ -83,6 +83,11 @@
                 </li>
             </ul>
             <div class="tabu-content">
+                <!-- tips & alerts -->
+                <div class="alert primary" id="alert-resultnum" style="display:none;">搜索到12条结果。</div>
+                <div class="alert" id="alert-refresh" style="display:none;">
+                    <a href="#" class="close">x</a>服务器已经更新，可以<a href="javascript:newSearch();">点击这里刷新搜索</a>。
+                </div>
                 <div class="content" id="result-all">
                     <div class="row">
                         <!-- content here -->

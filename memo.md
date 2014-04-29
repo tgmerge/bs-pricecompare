@@ -47,3 +47,20 @@
 
 * q
 * updateTime: server side update time of query 'q'
+
+## CheckUpdate process
+
+For client side:
+
+    New search:
+        start_clock(10s)
+        set_page_to(1)
+
+    Next page:
+        set_page_to(n)
+
+    While clock triggered:
+        stop_clock()
+
+    While clock tick clicked:
+        new search()

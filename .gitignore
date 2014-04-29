@@ -5,3 +5,6 @@
 
 # python code
 *.pyc
+
+# sublime project file
+*.sublime-workspace

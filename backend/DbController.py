@@ -38,7 +38,7 @@ class DbController(object):
     """Sqlite database filename. Default: 'soda.db'"""
     maxFetchPages = 5
     """Maximum pages fetched from shopping sites in a query. Default: 5"""
-    minDelayBetweenFetches = 30
+    minDelayBetweenFetches = 10
     """Minimum delay time(sec) between two queries with same keyword. Default: 30"""
     waitTimeForFetch = 3
     """Time(sec) waiting for items to be fetched and stored into database. Default: 3"""

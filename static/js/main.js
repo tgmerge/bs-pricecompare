@@ -1,65 +1,101 @@
-// query 
-
+// jquery
 var searchInput = $("#search-box");
 var siteList = $("#site-tab");
 var pageList = $("#paging-section");
 var resultList = $("#result-all>div.row");
 
+var alertNum = $("#alert-resultnum");
+var alertRefresh = $("#alert-refresh");
+
 var itemTemp = $("#template>div.item");
 var pageTemp = $("#template>li.pageno.normal");
 var pageActiveTemp = $("#template>li.pageno.active")
 
+// const
 var searchUrl = "/search";
 var updateUrl = "/update";
 
-// Query
+//init
+var session = Math.random();
+var oldTime = 0;
+var oldq = ""; // todo in search: if q != oldq: generate new session, oldq = q
+var oldsite = "";
+var clockId = 0;
+
+// Methods for query
+var newSearch = function() {
+    session = Math.random();
+    clockId = window.setInterval("sendForUpdate();", 10000);
+    updatePageNumber(1, 1);
+    sendSearch();
+}
+
+var search = function() {
+    var newq = searchInput.val();
+    var newsite = siteList.find("li.active a").attr('site');
+    if (newq != oldq || newsite != oldsite) {
+        oldq = newq;
+        oldsite = newsite;
+        window.clearInterval(clockId);
+        newSearch();
+    } else {
+        sendSearch();
+    }
+}
+
+// Methods for getting json(with updating page)
+
 var sendSearch = function() {
     // TODO some validator
-    var q = searchInput.val();
-    var site = siteList.find("li.active a").attr('site');
-    var session = Math.random();
-    var page = pageList.pagination('getCurrentPage');
     $.getJSON(
         searchUrl, {
-            'q': q,
-            'site': site,
+            'q': searchInput.val(),
+            'site': siteList.find("li.active a").attr('site'),
             'session': session,
-            'page': page
+            'page': pageList.pagination('getCurrentPage')
         }, function(data) {
-            updatePage(data)
+            updatePage(data);
         }
     );
-
 }
 
 var sendForUpdate = function() {
     var q = searchInput.val();
+    var t = 0;
     $.getJSON(
         updateUrl, {
             'q': q
         },
         function(data) {
-            updateTime(data.updateTime)
+            updateTimeTips(data.updateTime);
         }
-    )
+    );
 };
 
-// HTML updater
+// Methods for updating html
+
 var updatePage = function(json) {
     // TODO some validator
     updateSearchCount(json.count);
-    updateTime(json.updateTime);
+    updateTimeTips(json.updateTime);
     updatePageNumber(json.page, json.totalPage);
     updateItems(json.items);
 }
 
 var updateSearchCount = function(count) {
-    // todo
+    alertNum.show(100);
+    alertNum.text("搜索到" + count + "条结果。");
     console.log("[updateSearchCount]" + count);
 }
 
-var updateTime = function(updateTime) {
-    // todo
+var updateTimeTips = function(updateTime) {
+    if (updateTime - oldTime > 100) {
+        alertRefresh.show(100);
+        oldTime = updateTime;
+        window.clearInterval(clockId);
+    } else {
+        alertRefresh.hide(100);
+    }
     console.log("[updateTime]" + updateTime);
 }
 
@@ -96,7 +132,6 @@ var addItem = function(img, url, price, site, title) {
     item.find("span.site").text(site);
     item.find("p.item-title").text(title);
     resultList.append(item);
-    //console.log("[addItem]additem:" + img + "," + price + "," + site + "," + title);
 }
 
 var clearItems = function() {
@@ -104,5 +139,4 @@ var clearItems = function() {
     console.log("[clearItems]cleared all items.");
 }
 
-//init
-updatePageNumber(1, 5);
+updatePageNumber(1, 1);
