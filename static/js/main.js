@@ -6,6 +6,7 @@ var resultList = $("#result-all>div.row");
 
 var alertNum = $("#alert-resultnum");
 var alertRefresh = $("#alert-refresh");
+var clockExist = $("#clock-exist");
 
 var itemTemp = $("#template>div.item");
 var pageTemp = $("#template>li.pageno.normal");
@@ -26,6 +27,7 @@ var clockId = 0;
 var newSearch = function() {
     session = Math.random();
     clockId = window.setInterval("sendForUpdate();", 10000);
+    clockExist.show();
     updatePageNumber(1, 1);
     sendSearch();
 }
@@ -37,6 +39,7 @@ var search = function() {
         oldq = newq;
         oldsite = newsite;
         window.clearInterval(clockId);
+        clockExist.hide();
         newSearch();
     } else {
         sendSearch();
@@ -93,6 +96,7 @@ var updateTimeTips = function(updateTime) {
         alertRefresh.show(100);
         oldTime = updateTime;
         window.clearInterval(clockId);
+        clockExist.hide();
     } else {
         alertRefresh.hide(100);
     }
