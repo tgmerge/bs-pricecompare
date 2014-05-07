@@ -198,7 +198,7 @@ class DbController(object):
                 "site": site,
                 "session": sid,
                 "page": page,
-                "count": pagedItems.__len__(),
+                "count": items.__len__(),
                 "totalPage": items.__len__()/self.itemsPerPage,
                 "items": pagedItems}
 

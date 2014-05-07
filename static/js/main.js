@@ -28,6 +28,8 @@ var newSearch = function() {
     session = Math.random();
     clockId = window.setInterval("sendForUpdate();", 10000);
     clockExist.show();
+    oldTime = 0;
+    updateTimeTips(0);
     updatePageNumber(1, 1);
     sendSearch();
 }
@@ -80,7 +82,6 @@ var sendForUpdate = function() {
 var updatePage = function(json) {
     // TODO some validator
     updateSearchCount(json.count);
-    updateTimeTips(json.updateTime);
     updatePageNumber(json.page, json.totalPage);
     updateItems(json.items);
 }
@@ -92,7 +93,7 @@ var updateSearchCount = function(count) {
 }
 
 var updateTimeTips = function(updateTime) {
-    if (updateTime - oldTime > 100) {
+    if (updateTime > oldTime) {
         alertRefresh.show(100);
         oldTime = updateTime;
         window.clearInterval(clockId);

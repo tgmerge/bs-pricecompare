@@ -2,6 +2,7 @@
 import urllib2
 import urllib
 from BeautifulSoup import BeautifulSoup as MoeSoup
+from urllib2 import HTTPError
 
 
 class PriceParser(object):
@@ -96,7 +97,12 @@ class PriceParser(object):
         # Put page into soup
         url = parseUrl(q, page)
         print "[parseEverything]URL=%s" % url
-        soup = MoeSoup(urllib2.urlopen(url))
+        try:
+            soup = MoeSoup(urllib2.urlopen(url))
+        except HTTPError as e:
+            print "[%s]Exception on urlopen, ignoring page: " % site,
+            print e
+            return [];
 
         # Take out what we need, ignoring ones can't be parsed 'w'
         items = parseDiv(soup)
@@ -110,7 +116,7 @@ class PriceParser(object):
                 else:
                     print "[%s]Null value in item, ignoring item" % site
             except (IndexError, AttributeError, TypeError) as e:
-                    print "[%s]Exception, ignoring item" % site
+                    print "[%s]Exception, ignoring item: " % site,
                     print e
 
         print "---Returning %d items---" % datas.__len__()
