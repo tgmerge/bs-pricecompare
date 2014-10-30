@@ -3,6 +3,9 @@
 /test/*
 *.db
 
+# doc folder
+/doc/*
+
 # python code
 *.pyc
 

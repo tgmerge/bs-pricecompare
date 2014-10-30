@@ -28,4 +28,4 @@ with priceCompare:
         # todo add value validator
         return db.queryUpdate(q=request.GET.get('q'))
 
-run(app=priceCompare, host='localhost', port=8080)
+run(app=priceCompare, host='0.0.0.0', port=8080)

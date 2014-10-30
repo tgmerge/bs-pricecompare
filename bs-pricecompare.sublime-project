@@ -16,5 +16,8 @@
     }, {
         "name": "JS",
         "path": "static/js"
+    }, {
+        "name": "doc",
+        "path": "doc"
     }]
 }
